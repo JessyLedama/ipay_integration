@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="pos_payment_method_view_form_inherit_pos_ipay" model="ir.ui.view">
+        <field name="name">Payment Method</field>
+        <field name="model">pos.payment.method</field>
+        <field name="inherit_id" ref="point_of_sale.pos_payment_method_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='use_payment_terminal']" position="after">
+                <!-- Ipay config fields -->
+                <field name="ipay_pos_config_id" attrs="{'invisible': [('use_payment_terminal', '!=', 'ipay')], 'required': [('use_payment_terminal', '=', 'ipay')]}"/>
+                <field name="ipay_card" attrs="{'invisible': [('use_payment_terminal', '!=', 'ipay')], 'required': [('use_payment_terminal', '=', 'ipay')]}"/>
+                <field name="ipay_m_pesa" attrs="{'invisible': [('use_payment_terminal', '!=', 'ipay')], 'required': [('use_payment_terminal', '=', 'ipay')]}"/>
+                <field name="ipay_airtel_money" attrs="{'invisible': [('use_payment_terminal', '!=', 'ipay')], 'required': [('use_payment_terminal', '=', 'ipay')]}"/>
+                <field name="ipay_equitel" attrs="{'invisible': [('use_payment_terminal', '!=', 'ipay')], 'required': [('use_payment_terminal', '=', 'ipay')]}"/>
+                <field name="ipay_qr_code" attrs="{'invisible': [('use_payment_terminal', '!=', 'ipay')], 'required': [('use_payment_terminal', '=', 'ipay')]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

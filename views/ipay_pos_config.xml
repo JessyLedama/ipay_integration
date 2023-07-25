@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="ipay_configuration_form_view" model="ir.ui.view" >
+            <field name="name">iPay Configuration</field>
+            <field name="model">ipay.pos.config</field>
+            <field name="arch" type="xml">
+                <form string="iPay Config">
+                    <sheet>
+                        <div class="oe_title">
+                           <label for="name" class="oe_edit_only"/>
+                           <h1><field name="name"/></h1>
+                        </div>
+                        <div>
+                            <p>
+                                Change your credential configuration. You get this information when
+                                you sign up with iPay as a merchant. If you need more info on this, go 
+                                <a href="https://ipayafrica.com/forbusiness/">here</a>. 
+                            </p>
+                        </div>
+                        <group col="2">
+                            <field name="ipay_merchant_id"/>
+                            <field name="ipay_merchant_key"/>
+                            <field name="ipay_sub_account"/>
+                            <field name="ipay_pos_url"/>
+                            <field name="ipay_pos_hsh"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_pos_ipay_configuration_tree" model="ir.ui.view">
+            <field name="name">iPay Configurations</field>
+            <field name="model">ipay.pos.config</field>
+            <field name="arch" type="xml">
+                <tree string="Card Reader">
+                    <field name="name"/>
+                    <field name="ipay_merchant_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ipay_configuration_form" model="ir.actions.act_window">
+            <field name="name">iPay Configurations</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ipay.pos.config</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Configure your iPay instance
+              </p>
+            </field>
+        </record>
+
+        <menuitem 
+        parent="point_of_sale.menu_point_config_product" 
+        action="pos_ipay.ipay_configuration_form" 
+        id="menu_ipay_config" 
+        groups="base.group_no_one" 
+        sequence="7"/>
+
+    </data>
+</odoo>

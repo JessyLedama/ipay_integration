@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="pos_ipay.PaymentScreen" t-inherit="point_of_sale.PaymentScreen" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('payment-buttons')]" position="inside">
+           <div class="button js_ipay_pos"
+                t-on-click="addNumber">
+                <i class="fa fa-phone-square"/> Add Number
+            </div>
+            <div class="button js_ipay_pos"
+                t-on-click="addID">
+                <i class="fa fa-ticket"/> Add Transaction ID
+            </div>
+        </xpath>
+    </t>
+</templates>

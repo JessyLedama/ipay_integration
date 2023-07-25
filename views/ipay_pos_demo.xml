@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+      <record id="pos_ipay_configuration" model="ipay.pos.config">
+        <field name="name">iPay Demo</field>
+        <field name="ipay_merchant_id">demo</field>
+        <field name="ipay_merchant_key">demoCHANGED</field>
+        <field name="ipay_sub_account">770061</field>
+        <field name="ipay_pos_live"/>
+        <field name="ipay_pos_hsh">cvobyhxiuc</field>
+        <field name="ipay_pos_url">http://localhost:8069/pos_ipay/collector</field>
+      </record>
+    </data>
+</odoo>
