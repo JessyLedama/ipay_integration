@@ -6,7 +6,7 @@
         <field name="priority" eval="95"/>
         <field name="inherit_id" ref="base.res_config_settings_view_form" />
         <field name="arch" type="xml">
-            <xpath expr="//div[@id='o_settings_use_payment_terminals']" position="inside">
+            <xpath expr="//div[@id='pos_payment_terminals_section']" position="inside">
                <div class="col-12 col-lg-6 o_setting_box" title="The transactions are processed by iPay.">
                     <div class="o_setting_left_pane">
                         <field name="module_pos_ipay"/>
