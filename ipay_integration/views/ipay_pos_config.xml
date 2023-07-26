@@ -60,5 +60,12 @@
         groups="base.group_no_one" 
         sequence="7"/>
 
+        <menuitem 
+        parent="account.menu_finance_configuration" 
+        action="ipay_integration.ipay_configuration_form" 
+        id="menu_ipay_account_config" 
+        groups="base.group_no_one" 
+        sequence="7"/>
+
     </data>
 </odoo>
