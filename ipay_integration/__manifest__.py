@@ -2,12 +2,12 @@
 {
     'name': 'Ipay Integration',
     'category': 'Accounting/Payments',
-    'author': 'Jessy Ledama',
+    'author': 'SIMI Technologies',
     'summary': 'Integrate your Payments with Ipay',
     'version': '0.9.1',
     'license': "LGPL-3",
     'sequence': 7,
-    'description': """Ipay Integration""",
+    'description': """iPay Integration""",
 
     'depends': ['point_of_sale'],
     'data': [
