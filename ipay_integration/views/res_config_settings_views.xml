@@ -28,7 +28,7 @@
                         <field name="module_ipay_integration"/>
                     </div>
                     <div class="o_setting_right_pane">
-                        <label for="module_ipay_integration" string="iPay POS"/>
+                        <label for="module_ipay_integration" string="iPay Payments"/>
                         <div class="text-muted">
                             Accept payments with iPay.
                         </div>
