@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="pos_payment_method_view_form_inherit_pos_ipay" model="ir.ui.view">
+    <record id="pos_payment_method_view_form_inherit_ipay_integraion" model="ir.ui.view">
         <field name="name">Payment Method</field>
         <field name="model">pos.payment.method</field>
         <field name="inherit_id" ref="point_of_sale.pos_payment_method_view_form"/>

@@ -30,7 +30,7 @@
             </field>
         </record>
 
-        <record id="view_pos_ipay_configuration_tree" model="ir.ui.view">
+        <record id="view_ipay_integration_configuration_tree" model="ir.ui.view">
             <field name="name">iPay Configurations</field>
             <field name="model">ipay.pos.config</field>
             <field name="arch" type="xml">
@@ -55,7 +55,7 @@
 
         <menuitem 
         parent="point_of_sale.menu_point_config_product" 
-        action="pos_ipay.ipay_configuration_form" 
+        action="ipay_integration.ipay_configuration_form" 
         id="menu_ipay_config" 
         groups="base.group_no_one" 
         sequence="7"/>
