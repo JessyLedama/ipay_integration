@@ -24,6 +24,7 @@ class iPayPaymentProvider(models.Model):
     main_currency_id = fields.Many2one('res.currency', string="Currency")
     support_fees = fields.Boolean(string='Fees Supported', default=True)
     support_manual_capture = fields.Boolean(string='Manual Capture Supported', default=True)
+    support_tokenization = fields.Boolean(string='Tokenization Supported', default=True)
     
 
     #fixed values
