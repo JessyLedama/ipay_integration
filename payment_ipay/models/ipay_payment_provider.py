@@ -33,6 +33,7 @@ class iPayPaymentProvider(models.Model):
     module_to_buy = fields.Boolean(string="Odoo Enterprise Module", default=False)
     show_credentials_page = fields.Boolean(string='Show Credentials Page', default=True)
     show_allow_express_checkout = fields.Boolean(string='Show Allow Express Checkout Supported', default=True)
+    show_allow_tokenization = fields.Boolean(string='Show Allow Tokenization Supported', default=True)
     
 
     #fixed values
