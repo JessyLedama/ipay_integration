@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo noupdate="1">
 
-    <record id="payment.payment_provider_ipay" model="payment.provider">
+    <record id="payment_provider_ipay" model="payment.provider">
         <field name="code">ipay</field>
         <field name="redirect_form_view_id" ref="redirect_form"/>
     </record>
