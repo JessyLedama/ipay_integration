@@ -58,6 +58,8 @@ class iPayPaymentProvider(models.Model):
     allow_express_checkout = fields.Boolean(string='Allow Express Checkout Supported')
     maximum_amount = fields.Monetary(string='Maximum Amount', currency_field="main_currency_id", help="The maximum payment amount that this payment provider is available for. Leave blank to make it available for any payment amount.")
     available_country_ids = fields.Many2many('res.country', string="Countries")
+    auth_msg = fields.Html(string="Authorize Message")
+    cancel_msg = fields.Html(string="Canceled Message")
 
 
     #fixed values
