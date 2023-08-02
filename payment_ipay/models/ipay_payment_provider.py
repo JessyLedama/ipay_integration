@@ -54,6 +54,7 @@ class iPayPaymentProvider(models.Model):
     display_as = fields.Char(string="Displayed As", help="Description of the provider for customers")
     payment_icon_ids = fields.Many2many('payment.icon',string="Supported Payment Icons")
     allow_tokenization = fields.Boolean(string="Allow Saving Payment Methods", default=True)
+    capture_manually = fields.Boolean(string="Capture Amount Manually")
 
 
     #fixed values
