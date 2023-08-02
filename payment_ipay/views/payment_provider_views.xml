@@ -2,7 +2,7 @@
 <odoo>
 
     <record id="ipay_payment_provider_form" model="ir.ui.view">
-        <field name="name">iPay Provider Form</field>
+        <field name="name">iPayProviderForm</field>
         <field name="model">payment.provider</field>
         <field name="inherit_id" ref="payment.payment_provider_form"/>
         <field name="arch" type="xml">
