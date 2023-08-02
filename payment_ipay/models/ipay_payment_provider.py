@@ -69,7 +69,7 @@ class iPayPaymentProvider(models.Model):
     express_checkout_form_view_id = fields.Many2one('ir.ui.view', string="Express Checkout Form Template")
     display_name = fields.Char(string="Display Name")
     fees_dom_fixed = fields.Float(string="Fixed Domestic Fees")
-    fees_dom_var = fields.Fload(string="Variable Domestic Fees (%)")
+    fees_dom_var = fields.Float(string="Variable Domestic Fees (%)")
     fees_int_fixed = fields.Float(string="Fixed International Fees")
     id = fields.Integer(string="ID")
     inline_form_view_id = fields.Many2one('ir.ui.view', string="Inline Form Template")
