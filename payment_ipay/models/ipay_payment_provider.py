@@ -28,6 +28,7 @@ class iPayPaymentProvider(models.Model):
     support_manual_capture = fields.Boolean(string='Manual Capture Supported', default=True)
     support_tokenization = fields.Boolean(string='Tokenization Supported', default=True)
     support_express_checkout = fields.Boolean(string='Express Checkout Supported', default=True)
+    module_id = fields.Many2one('ir.module.module', string='Corresponding Module')
     
 
     #fixed values
