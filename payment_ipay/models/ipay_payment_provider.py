@@ -41,6 +41,11 @@ class iPayPaymentProvider(models.Model):
     show_cancel_msg = fields.Boolean(string='Show Cancel Message', default=True)
     so_reference_type = fields.Selection([('so_name', 'Based on document reference'), ('partner', 'Based on Partner ID')], string='Communication')
     show_pre_msg = fields.Boolean(string='Show Pre Message', default=True)
+    show_done_msg = fields.Boolean(string='Show Done Message', default=True)
+    support_refund = fields.Selection(string='Type of Refund Supported')
+    write_date = fields.Datetime(string='Last Updated On')
+    write_uid = fields.Many2one('res.users', string="Last Updated By")
+
 
     #fixed values
     ipay_pos_url = fields.Char('Hook URL', compute='_gen_endpoint', readonly=True, store=True)
