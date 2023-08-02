@@ -37,7 +37,10 @@ class iPayPaymentProvider(models.Model):
     show_payment_icon_ids = fields.Boolean(string='Show Payment Icon', default=True)
     show_pre_msg = fields.Boolean(string='Show Pre Message', default=True)
     show_pending_msg = fields.Boolean(string='Show Pending Message', default=True)
-    
+    show_auth_msg = fields.Boolean(string='Show Auth Message', default=True)
+    show_cancel_msg = fields.Boolean(string='Show Cancel Message', default=True)
+    so_reference_type = fields.Selection([('so_name', 'Based on document reference'), ('partner', 'Based on Partner ID')], string='Communication')
+    show_pre_msg = fields.Boolean(string='Show Pre Message', default=True)
 
     #fixed values
     ipay_pos_url = fields.Char('Hook URL', compute='_gen_endpoint', readonly=True, store=True)
