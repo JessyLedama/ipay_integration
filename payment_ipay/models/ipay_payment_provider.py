@@ -32,6 +32,7 @@ class iPayPaymentProvider(models.Model):
     module_state = fields.Selection([('uninstalled', 'Uninstalled'), ('installed', 'Installed')], string="Installation State", default='uninstalled')
     module_to_buy = fields.Boolean(string="Odoo Enterprise Module", default=False)
     show_credentials_page = fields.Boolean(string='Show Credentials Page', default=True)
+    show_allow_express_checkout = fields.Boolean(string='Show Allow Express Checkout Supported', default=True)
     
 
     #fixed values
