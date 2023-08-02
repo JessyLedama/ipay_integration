@@ -65,6 +65,19 @@ class iPayPaymentProvider(models.Model):
     __last_update = fields.Datetime(string="Last Modified On")
     create_uid = fields.Many2one('res.users', string="Created By")
     done_msg = fields.Html(string="Done Message")
+    fees_active = fields.Boolean(string="Add Extra Fees")
+    express_checkout_form_view_id = fields.Many2one('ir.ui.view', string="Express Checkout Form Template")
+    display_name = fields.Char(string="Display Name")
+    fees_dom_fixed = fields.Float(string="Fixed Domestic Fees")
+    fees_dom_var = fields.Fload(string="Variable Domestic Fees (%)")
+    fees_int_fixed = fields.Float(string="Fixed International Fees")
+    id = fields.Integer(string="ID")
+    inline_form_view_id = fields.Many2one('ir.ui.view', string="Inline Form Template")
+    redirect_form_view_id = fields.Many2one('ir.ui.view', string="Redirect From Template", help="The template rendering a form submitted to redirect the user when making a payment")
+    token_inline_form_view_id = fields.Many2one('ir.ui.view', string="Token Inline Form Template")
+    
+
+
 
 
 
