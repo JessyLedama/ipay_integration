@@ -7,6 +7,10 @@ from werkzeug import urls
 from odoo import fields, models
 
 class iPayPaymentProvider(models.Model):
-    _name = 'ipay.payment.provider'
     _description = "iPay Payment Provider"
-    _inherit = ['ipay.pos.config', 'payment.provider']
+    _inherit = ['ipay.pos.config']
+
+
+class InheritPaymentProvider(models.Model):
+    _inherit = 'payment.provider'
+    _description = 'Payment Provider Inherited'
