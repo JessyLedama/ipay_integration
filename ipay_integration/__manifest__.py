@@ -9,7 +9,7 @@
     'sequence': 7,
     'description': """iPay Integration""",
 
-    'depends': ['point_of_sale', 'account'],
+    'depends': ['point_of_sale', 'account', 'ipay_integration'],
     'data': [
         'views/pos_payment_method_views.xml',
         'views/point_of_sale_assets.xml',

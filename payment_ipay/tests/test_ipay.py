@@ -20,8 +20,10 @@ class iPayTest(iPayCommon, PaymentHttpCommon):
         self.patch(type(self.env['base']), 'get_base_url', lambda _: 'http://127.0.0.1:8069')
 
         return_url = self._build_url(iPayController._return_url)
-        expected_values = {
-            'Brq_websitekey': self.ipay.ipay_website_key,
+        expected_values = {  
+            'Brq_merchant_id': self.ipay.ipay_merchant_id,
+            'Brq_ipay_merchant_key': self.ipay.ipay_merchant_key,
+            'Brq_ipay_sub_account': self.ipay.ipay_sub_account,
             'Brq_amount': str(self.amount),
             'Brq_currency': self.currency.name,
             'Brq_invoicenumber': self.reference,
