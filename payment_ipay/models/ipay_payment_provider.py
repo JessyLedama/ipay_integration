@@ -22,6 +22,7 @@ class iPayPaymentProvider(models.Model):
     website_id = fields.Many2one('website', string="Website")
     is_published = fields.Boolean(string='Published', default=False)
     main_currency_id = fields.Many2one('res.currency', string="Currency")
+    support_fees = fields.Boolean(string='Fees Supported', default=True)
     
 
     #fixed values
