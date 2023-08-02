@@ -42,7 +42,7 @@ class iPayPaymentProvider(models.Model):
     so_reference_type = fields.Selection([('so_name', 'Based on document reference'), ('partner', 'Based on Partner ID')], string='Communication')
     show_pre_msg = fields.Boolean(string='Show Pre Message', default=True)
     show_done_msg = fields.Boolean(string='Show Done Message', default=True)
-    support_refund = fields.Selection(string='Type of Refund Supported')
+    support_refund = fields.Selection([('full_only', 'Full Only'), ('partial', 'Partial')], string='Type of Refund Supported')
     write_date = fields.Datetime(string='Last Updated On')
     write_uid = fields.Many2one('res.users', string="Last Updated By")
 
