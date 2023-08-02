@@ -28,7 +28,7 @@ class iPayPaymentProvider(models.Model):
     main_currency_id = fields.Many2one('res.currency', string="Currency")
     support_fees = fields.Boolean(string='Fees Supported', default=True)
     support_manual_capture = fields.Boolean(string='Manual Capture Supported', default=True)
-    support_tokenization = fields.Boolean(string='Tokenization Supported', default=True)
+    allow_tokenization = fields.Boolean(string='Tokenization Supported', default=True)
     support_express_checkout = fields.Boolean(string='Express Checkout Supported', default=True)
     module_id = fields.Many2one('ir.module.module', string='Corresponding Module')
     module_state = fields.Selection([('uninstalled', 'Uninstalled'), ('installed', 'Installed')], string="Installation State", default='uninstalled')
