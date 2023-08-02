@@ -21,6 +21,7 @@ class iPayPaymentProvider(models.Model):
     ipay_pos_live = fields.Boolean('live field', default=False, help="run pos payment in test mode")
     company_id = fields.Many2one('res.company', string="Company")
     website_id = fields.Many2one('website', string="Website")
+    is_published = fields.Boolean(string='Published', default=False)
 
     #fixed values
     ipay_pos_url = fields.Char('Hook URL', compute='_gen_endpoint', readonly=True, store=True)
