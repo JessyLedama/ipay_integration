@@ -55,6 +55,7 @@ class iPayPaymentProvider(models.Model):
     payment_icon_ids = fields.Many2many('payment.icon',string="Supported Payment Icons")
     allow_tokenization = fields.Boolean(string="Allow Saving Payment Methods", default=True)
     capture_manually = fields.Boolean(string="Capture Amount Manually")
+    allow_express_checkout = fields.Boolean(string='Allow Express Checkout Supported')
 
 
     #fixed values
