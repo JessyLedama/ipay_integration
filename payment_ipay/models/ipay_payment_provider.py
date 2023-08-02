@@ -49,6 +49,7 @@ class iPayPaymentProvider(models.Model):
     create_date = fields.Datetime(string='Created On')
     write_uid = fields.Many2one('res.users', string="Last Updated By")
     code = fields.Integer(string="Color", help="The color of the card in kanban view")
+    image_128 = fields.Binary(string="Image")
 
 
     #fixed values
