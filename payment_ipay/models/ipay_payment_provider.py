@@ -30,6 +30,7 @@ class iPayPaymentProvider(models.Model):
     support_express_checkout = fields.Boolean(string='Express Checkout Supported', default=True)
     module_id = fields.Many2one('ir.module.module', string='Corresponding Module')
     module_state = fields.Selection([('uninstalled', 'Uninstalled'), ('installed', 'Installed')], string="Installation State", default='uninstalled')
+    module_to_buy = fields.Boolean(string="Odoo Enterprise Module", default=False)
     
 
     #fixed values
