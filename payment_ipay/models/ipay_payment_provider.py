@@ -22,6 +22,7 @@ class iPayPaymentProvider(models.Model):
     company_id = fields.Many2one('res.company', string="Company")
     website_id = fields.Many2one('website', string="Website")
     is_published = fields.Boolean(string='Published', default=False)
+    main_currency_id = fields.Many2one('res.currency', string="Currency")
 
     #fixed values
     ipay_pos_url = fields.Char('Hook URL', compute='_gen_endpoint', readonly=True, store=True)
