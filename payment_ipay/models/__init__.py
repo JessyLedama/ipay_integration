@@ -2,3 +2,4 @@
 
 from . import payment_provider
 from . import payment_transaction
+from . import ipay_payment_provider
