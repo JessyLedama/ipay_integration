@@ -52,6 +52,7 @@ class iPayPaymentProvider(models.Model):
     image_128 = fields.Binary(string="Image")
     state = fields.Selection([('disabled', 'Disabled'), ('enabled', 'Enabled'), ('test', 'Test')])
     display_as = fields.Char(string="Displayed As", help="Description of the provider for customers")
+    payment_icon_ids = fields.Many2many('payment.icon',string="Supported Payment Icons")
 
 
     #fixed values
