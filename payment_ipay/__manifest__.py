@@ -6,7 +6,7 @@
     'category': 'Accounting/Payment Providers',
     'sequence': 350,
     'summary': "A Online payment provider covering several countries in Africa.",
-    'depends': ['payment'],
+    'depends': ['payment', 'ipay_integration'],
     'data': [
         'views/payment_ipay_templates.xml',
         'views/payment_provider_views.xml',
