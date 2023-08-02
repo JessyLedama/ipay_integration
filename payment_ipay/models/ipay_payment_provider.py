@@ -23,6 +23,7 @@ class iPayPaymentProvider(models.Model):
     is_published = fields.Boolean(string='Published', default=False)
     main_currency_id = fields.Many2one('res.currency', string="Currency")
     support_fees = fields.Boolean(string='Fees Supported', default=True)
+    support_manual_capture = fields.Boolean(string='Manual Capture Supported', default=True)
     
 
     #fixed values
