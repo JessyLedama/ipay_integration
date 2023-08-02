@@ -29,6 +29,7 @@ class iPayPaymentProvider(models.Model):
     support_tokenization = fields.Boolean(string='Tokenization Supported', default=True)
     support_express_checkout = fields.Boolean(string='Express Checkout Supported', default=True)
     module_id = fields.Many2one('ir.module.module', string='Corresponding Module')
+    module_state = fields.Selection([('uninstalled', 'Uninstalled'), ('installed', 'Installed')], string="Installation State", default='uninstalled')
     
 
     #fixed values
