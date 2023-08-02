@@ -60,6 +60,12 @@ class iPayPaymentProvider(models.Model):
     available_country_ids = fields.Many2many('res.country', string="Countries")
     auth_msg = fields.Html(string="Authorize Message")
     cancel_msg = fields.Html(string="Canceled Message")
+    journal_id = fields.Many2one('account.journal', string="Payment Journal")
+    sequence = fields.Integer(string='Sequence')
+    __last_update = fields.Datetime(string="Last Modified On")
+    create_uid = fields.Many2one('res.users', string="Created By")
+    done_msg = fields.Html(string="Done Message")
+
 
 
     #fixed values
