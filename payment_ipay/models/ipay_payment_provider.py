@@ -18,6 +18,8 @@ class iPayPaymentProvider(models.Model):
     ipay_merchant_key = fields.Char(string="iPay Merchant Key", copy="False", help="The Hash Key given to your corporation by IPAY", default="demoCHANGED")
     ipay_sub_account = fields.Char(string="iPay Sub Account", help="The sub account given to you by iPay for mpesa/equitel transactions", default="77061")
     ipay_pos_live = fields.Boolean('live field', default=False, help="run pos payment in test mode")
+
+    # payment provider details
     company_id = fields.Many2one('res.company', string="Company")
     website_id = fields.Many2one('website', string="Website")
     is_published = fields.Boolean(string='Published', default=False)
@@ -25,6 +27,7 @@ class iPayPaymentProvider(models.Model):
     support_fees = fields.Boolean(string='Fees Supported', default=True)
     support_manual_capture = fields.Boolean(string='Manual Capture Supported', default=True)
     support_tokenization = fields.Boolean(string='Tokenization Supported', default=True)
+    support_express_checkout = fields.Boolean(string='Express Checkout Supported', default=True)
     
 
     #fixed values
