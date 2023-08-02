@@ -20,6 +20,8 @@ class iPayPaymentProvider(models.Model):
     ipay_pos_live = fields.Boolean('live field', default=False, help="run pos payment in test mode")
 
     # payment provider details
+    code = fields.Selection(
+        selection_add=[('ipay', "iPay")], ondelete={'ipay': 'set default'})
     company_id = fields.Many2one('res.company', string="Company")
     website_id = fields.Many2one('website', string="Website")
     is_published = fields.Boolean(string='Published', default=False)
@@ -44,7 +46,9 @@ class iPayPaymentProvider(models.Model):
     show_done_msg = fields.Boolean(string='Show Done Message', default=True)
     support_refund = fields.Selection([('full_only', 'Full Only'), ('partial', 'Partial')], string='Type of Refund Supported')
     write_date = fields.Datetime(string='Last Updated On')
+    create_date = fields.Datetime(string='Created On')
     write_uid = fields.Many2one('res.users', string="Last Updated By")
+    code = fields.Integer(string="Color", help="The color of the card in kanban view")
 
 
     #fixed values
