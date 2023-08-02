@@ -36,6 +36,7 @@ class iPayPaymentProvider(models.Model):
     show_allow_tokenization = fields.Boolean(string='Show Allow Tokenization Supported', default=True)
     show_payment_icon_ids = fields.Boolean(string='Show Payment Icon', default=True)
     show_pre_msg = fields.Boolean(string='Show Pre Message', default=True)
+    show_pending_msg = fields.Boolean(string='Show Pending Message', default=True)
     
 
     #fixed values
