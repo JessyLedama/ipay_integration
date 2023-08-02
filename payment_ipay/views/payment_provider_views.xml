@@ -3,7 +3,7 @@
 
     <record id="payment_provider_form" model="ir.ui.view">
         <field name="name">iPay Provider Form</field>
-        <field name="model">ipay_integration.pos_payment_methods</field>
+        <field name="model">ipay.payment.provider</field>
         <field name="inherit_id" ref="payment.payment_provider_form"/>
         <field name="arch" type="xml">
             <group name="provider_credentials" position='inside'>
