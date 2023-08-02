@@ -48,9 +48,10 @@ class iPayPaymentProvider(models.Model):
     write_date = fields.Datetime(string='Last Updated On')
     create_date = fields.Datetime(string='Created On')
     write_uid = fields.Many2one('res.users', string="Last Updated By")
-    code = fields.Integer(string="Color", help="The color of the card in kanban view")
+    code = fields.Selection([('none', 'No Provider Set'), ('demo', 'Demo'), ('ipay', 'iPay')], string="Code", help="The technical code of this payment provider")
     image_128 = fields.Binary(string="Image")
     state = fields.Selection([('disabled', 'Disabled'), ('enabled', 'Enabled'), ('test', 'Test')])
+    display_as = fields.Char(string="Displayed As", help="Description of the provider for customers")
 
 
     #fixed values
