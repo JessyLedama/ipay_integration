@@ -8,7 +8,7 @@ from odoo import fields, models
 
 class iPayPaymentProvider(models.Model):
     _description = "iPay Payment Provider"
-    _inherit = ['ipay.pos.config']
+    _inherit = 'ipay.pos.config'
 
 
 class InheritPaymentProvider(models.Model):
