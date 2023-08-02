@@ -35,6 +35,7 @@ class iPayPaymentProvider(models.Model):
     show_allow_express_checkout = fields.Boolean(string='Show Allow Express Checkout Supported', default=True)
     show_allow_tokenization = fields.Boolean(string='Show Allow Tokenization Supported', default=True)
     show_payment_icon_ids = fields.Boolean(string='Show Payment Icon', default=True)
+    show_pre_message = fields.Boolean(string='Show Pre Message', default=True)
     
 
     #fixed values
