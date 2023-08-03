@@ -75,6 +75,7 @@ class iPayPaymentProvider(models.Model):
     inline_form_view_id = fields.Many2one('ir.ui.view', string="Inline Form Template")
     redirect_form_view_id = fields.Many2one('ir.ui.view', string="Redirect From Template", help="The template rendering a form submitted to redirect the user when making a payment")
     token_inline_form_view_id = fields.Many2one('ir.ui.view', string="Token Inline Form Template")
+    fees_int_var = fields.Float(string="Variable International Fees (%)")
     
 
 
